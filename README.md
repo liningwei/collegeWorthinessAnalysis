@@ -8,6 +8,7 @@ Main analysis code includes:
     utility.py (loader and helper functions)
     analysis.py (main calculation and plotting script)
 
+plots folder contains all the output plots from the visualization notebook
 
 Required package:
 - Pandas
