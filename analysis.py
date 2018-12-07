@@ -410,3 +410,12 @@ if __name__ == "__main__":
     plot_grad_total()
     plot_years_to_even()
     plot_salary_five_years()
+
+    from modulefinder import ModuleFinder
+
+    f = ModuleFinder()
+    # Run the main script
+    f.run_script('analysis.py')
+    # Get names of all the imported modules
+    names = list(f.modules.keys())
+    print(names)
