@@ -26,7 +26,7 @@ def plot_tuition_by_year(tuition_fname="dataset/tuition.xlsx"):
 
 def plot_tuition_average(tuition_fname="dataset/tuition.xlsx"):
     """
-
+    plot the averaged tuition data
     :param tuition_fname:
     :return:matplotlib axes plot
     """
@@ -54,7 +54,7 @@ def plot_tuition_average(tuition_fname="dataset/tuition.xlsx"):
 
 def plot_financial(financial_fname="dataset/financial.xlsx"):
     """
-
+    plots financial data
     :param financial_fname:
     :return:matplotlib axes plot
     """
@@ -75,10 +75,10 @@ def plot_financial(financial_fname="dataset/financial.xlsx"):
 
 def calculate_fee_with_aids(tuition_fname="dataset/tuition.xlsx", financial_fname="dataset/financial.xlsx"):
     """
-
+    calculates averaged fees with financial aids
     :param tuition_fname:
     :param financial_fname:
-    :return:
+    :return: total_fee, total_fee_with_aid, ug_aid_avg, grad_aid_avg
     """
     financial = read_data(financial_fname)
     tuition = read_data(tuition_fname)
@@ -100,7 +100,7 @@ def calculate_fee_with_aids(tuition_fname="dataset/tuition.xlsx", financial_fnam
 
 def plot_cost_with_aid(tuition_fname="dataset/tuition.xlsx", financial_fname="dataset/financial.xlsx"):
     """
-
+    plots tuitions costs after financial aids
     :param tuition_fname:
     :param financial_fname:
     :return:matplotlib axes plot
@@ -127,7 +127,7 @@ def plot_cost_with_aid(tuition_fname="dataset/tuition.xlsx", financial_fname="da
 
 def plot_salary():
     """
-
+    plots averaged salary data 
     :return:matplotlib axes plot
     """
     salary_as, salary_ug, salary_grad, \
@@ -160,7 +160,7 @@ def plot_salary():
 
 def calculate_salary_stat(salary_fname=["dataset/salary_as.xlsx", "dataset/salary_ug.xlsx", "dataset/salary_grad.xlsx"]):
     """
-
+    calculate stats with salary data
     :param salary_fname:
     :return:
     """
@@ -185,7 +185,7 @@ def calculate_salary_stat(salary_fname=["dataset/salary_as.xlsx", "dataset/salar
 
 def plot_salary_range():
     """
-
+    plots range of starting salary
     :return:matplotlib axes plot
     """
     salary_as, salary_ug, salary_grad, \
@@ -207,8 +207,8 @@ def plot_salary_range():
 
 def calculate_ug_total():
     """
-
-    :return:
+    calculates the total cost for ug with opportunity cost
+    :return:cost_ug_tuition, cost_ug_total
     """
     salary_as, salary_ug, salary_grad, \
     salary_as_mean_all, salary_ug_mean_all, salary_grad_mean_all, \
@@ -225,7 +225,7 @@ def calculate_ug_total():
 
 def plot_ug_total():
     """
-
+    plots the total cost for ug with opportunity cost
     :param salary_fname:
     :return:matplotlib axes plot
     """
@@ -261,8 +261,8 @@ def plot_ug_total():
 
 def calculate_grad_total():
     """
-
-    :return:
+    calculates the total cost for grad with opportunity cost
+    :return:cost_ug_total, cost_grad_tuition, cost_grad_with_ug, cost_grad_total
     """
     salary_as, salary_ug, salary_grad, \
     salary_as_mean_all, salary_ug_mean_all, salary_grad_mean_all, \
@@ -285,7 +285,7 @@ def calculate_grad_total():
 
 def plot_grad_total():
     """
-
+    plots the total cost for grad with opportunity cost
     :return:matplotlib axes plot
     """
 
@@ -326,8 +326,8 @@ def plot_grad_total():
 
 def calculate_years_to_even():
     """
-
-    :return:
+    calculates the years it takes to even the cost with salary data
+    :return: years 
     """
 
     cost_ug_total, cost_grad_tuition, cost_grad_with_ug, cost_grad_total = calculate_grad_total()
@@ -343,7 +343,7 @@ def calculate_years_to_even():
 
 def plot_years_to_even():
     """
-
+    plots years it takes to even the cost
     :return:matplotlib axes plot
     """
     years = calculate_years_to_even()
@@ -366,7 +366,7 @@ def plot_years_to_even():
 
 def plot_salary_five_years():
     """
-
+    plots the 5 year salary amount versus total tuition cost
     :return:matplotlib axes plot
     """
 
